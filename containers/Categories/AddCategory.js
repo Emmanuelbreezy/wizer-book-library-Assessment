@@ -6,6 +6,7 @@ import * as Yup from 'yup';
 
 export default function AddCategory() {
     const router = useRouter()
+    const query = router.query;
 
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState(false);
@@ -27,8 +28,8 @@ export default function AddCategory() {
 
       const handleAddSubmit = (data) =>{
           console.log(data,'data')
-        setLoading(true);
-        fetch('https://61167dbc1c592d0017bb7f4c.mockapi.io/categories',{
+          setLoading(true);
+          fetch('https://61167dbc1c592d0017bb7f4c.mockapi.io/categories',{
             method:"POST",
             headers:{
                 'Content-Type': 'application/json'
@@ -54,6 +55,31 @@ export default function AddCategory() {
         })
 
       }
+
+      const handleUpdateSubmit = (data) =>{
+        console.log(data,'data')
+        setLoading(true);
+        fetch('https://61167dbc1c592d0017bb7f4c.mockapi.io/categories',{
+            method:"POST",
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({  
+                name: data.categoryName,  
+                isFavorite: data.isFavorite 
+            })
+        })
+        .then(response => {
+            setLoading(false);
+            console.log(response)
+        })
+        .catch(error => {
+            setLoading(false);
+            setError('Error Ocurred,Try again');
+            console.log(error)
+        })
+
+    }
 
       return (
           <div className="app-add--category mt-2">

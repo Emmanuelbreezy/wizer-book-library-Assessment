@@ -5,7 +5,7 @@ import bookreadingImg from  '../../public/assets/images/book_lover.png';
 import Books from '../Books/Books';
 import Categories from '../Categories/Categories';
 
-export default function HomePage() {
+export default function Home() {
   
     return (
         <div className="home--section">

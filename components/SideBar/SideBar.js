@@ -2,7 +2,6 @@ import React,{ useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Image from 'next/image';
-import { Scrollbars } from 'react-custom-scrollbars';
 import avatar from '../../public/assets/images/myphoto.png';
 
 export default function SideBar() {
@@ -28,7 +27,6 @@ export default function SideBar() {
                    </div>
                </div>
            </div>
-           {/* <div className="app--sidebar--bottom--container"> */}
                <div className="app--sidebar--bottom--container">
 
                <div className="container">

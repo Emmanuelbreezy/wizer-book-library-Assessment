@@ -2,9 +2,9 @@ import React from 'react';
 import Head from 'next/head';
 import Layout from '../hoc/Layout/Layout';
 
-import HomePage from '../containers/HomePage/HomePage';
+import Home from '../containers/Home/Home';
 
-export default function Home() {
+export default function HomePage() {
   return (
     <>
       <Head>
@@ -16,7 +16,7 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet"></link>
       </Head>
       <Layout>
-          <HomePage />
+          <Home />
       </Layout>
       
     </>
