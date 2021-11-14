@@ -4,7 +4,7 @@
 
 The application is built with [React/Next.js Framework](https://nextjs.org/) and Sass(Boostrap)
 
-[Book Library Assessment Demo](https://paddle-frontend-assessment.vercel.app/homepage)
+[Book Library Assessment Demo](https://booklib.vercel.app/)
 
 ## Libraries used
 
@@ -30,4 +30,6 @@ npm run dev
 yarn dev
 ```
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![bookapp1](https://user-images.githubusercontent.com/35114137/141691270-667be92f-1492-4daf-95b9-30803b11f340.PNG)
+
 
