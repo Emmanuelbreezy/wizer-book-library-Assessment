@@ -11150,17 +11150,85 @@ body {
   }
 }
 .app--layout .app--mainbar {
+  position: relative;
   height: auto;
   background-color: #fff;
 }
 @media (min-width: 992px) {
   .app--layout .app--mainbar {
+    position: relative;
     flex-direction: column;
     height: 100vh;
     overflow-x: hidden;
     overflow-y: auto;
     background-color: #fff;
   }
+}
+
+.header--nav {
+  height: 90px;
+  margin-bottom: 0.4rem;
+}
+.header--nav .navbar {
+  position: fixed;
+  padding-bottom: 1.7rem;
+  padding-top: 0.7rem;
+  width: 100%;
+  background-color: #fff;
+  z-index: 9999;
+  border-bottom: 1px solid rgba(238, 238, 238, 0.3);
+}
+@media (min-width: 768px) {
+  .header--nav .navbar {
+    width: 77.5%;
+  }
+}
+.header--nav .navbar-collapse {
+  width: 100%;
+  top: 99%;
+  z-index: 1;
+  height: auto;
+  padding: 0.2rem;
+  background-color: rgba(209, 207, 207, 0.1);
+  margin-top: 1.2rem;
+}
+.header--nav .navbar-collapse ul {
+  list-style: none;
+}
+
+.menus--nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.menus--nav li {
+  width: 100%;
+  display: block;
+  line-height: 3rem;
+}
+.menus--nav li .active {
+  background-color: var(--primary-color);
+  color: white !important;
+  font-weight: 600;
+}
+.menus--nav li a {
+  width: auto;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  padding-left: 0.8rem;
+  text-decoration: none;
+  color: gray;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.menus--nav li a span {
+  padding-left: 0.5rem;
+}
+.menus--nav li a:hover {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
 }
 
 .app--sidebar {
@@ -11269,18 +11337,6 @@ body {
   color: #fff;
 }
 
-.header--nav {
-  position: relative;
-  height: 90px;
-  margin-bottom: 0.8rem;
-}
-.header--nav .navbar {
-  height: 100%;
-  padding-bottom: 0.7rem;
-  width: 100%;
-  border-bottom: 1px solid rgba(238, 238, 238, 0.3);
-}
-
 .custom-modal {
   width: 300px;
 }
@@ -11324,10 +11380,15 @@ body {
   }
 }
 .home--section .container-fluid .home--top--wrapper {
-  width: 100%;
+  width: 98%;
   background-color: #F9F9FB;
   margin-bottom: 0.8rem;
   border-radius: 18px;
+}
+@media (min-width: 768px) {
+  .home--section .container-fluid .home--top--wrapper {
+    width: 100%;
+  }
 }
 .home--section .container-fluid .home--top--wrapper .row h3 {
   letter-spacing: 1px;
@@ -11463,6 +11524,9 @@ body {
   color: white;
 }
 
+.app-add--category .container {
+  padding-bottom: 3.5rem;
+}
 .app-add--category .container .cat--cover {
   width: 80%;
   height: 220px;

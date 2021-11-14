@@ -1,18 +1,9 @@
-import React,{ useState } from 'react';
-import { useRouter } from 'next/router';
-import Link from 'next/link';
 import Image from 'next/image';
 import avatar from '../../public/assets/images/myphoto.png';
+import Menus from '../Menus/Menus';
 
 export default function SideBar() {
-    const [toggleNav,setToggleNav] = useState(false);
-    const [toggleBookNav,setToggleBookNav] = useState(false);
-    const router = useRouter();
-
-
-    const handleToggle = () => setToggleNav(prevState => !prevState);
-    const handleBookNavToggle = () => setToggleBookNav(prevState => !prevState);
-
+   
     return (
         <div className=" app--sidebar col-lg-4">
            <div className="app--sidebar--top--container">
@@ -30,7 +21,8 @@ export default function SideBar() {
                <div className="app--sidebar--bottom--container">
 
                <div className="container">
-                   <ul className="sidebar--menus nav">
+                   <Menus />
+                   {/* <ul className="sidebar--menus nav">
                        <li className="nav-item">
                            <Link href="/">
                             <a className={router.pathname === '/' ? 'active' : ''}>
@@ -98,7 +90,7 @@ export default function SideBar() {
                            </a>
                            </Link>
                        </li>
-                   </ul>
+                   </ul> */}
                </div>
             </div>
 

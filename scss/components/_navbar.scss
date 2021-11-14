@@ -3,16 +3,34 @@
 
 
 .header--nav{
-    position: relative;
     height: 90px;
-    margin-bottom: 0.8rem;
+    margin-bottom: 0.4rem;
     .navbar{
-        height: 100%;
-        padding-bottom: 0.7rem;
+        position: fixed;
+        padding-bottom: 1.7rem;
+        padding-top: 0.7rem;
         width: 100%;
+        background-color: #fff;
+        z-index: 9999;
         border-bottom: 1px solid rgba($color: #eee, $alpha: 0.3);
 
-        
+        @include media-breakpoint-up(md){
+            width: 77.5%;
+         }
+    }
+
+    .navbar-collapse{
+        width: 100%;
+        top: 99%;
+        z-index: 1;
+        height: auto;
+        padding: 0.2rem;
+        background-color: rgba(209, 207, 207, 0.1); 
+        margin-top: 1.2rem;
+
+        ul{
+            list-style: none;
+        }
     }
     
 }

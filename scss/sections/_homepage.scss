@@ -23,10 +23,14 @@
 
 
         .home--top--wrapper{
-           width: 100%;
+           width: 98%;
             background-color: #F9F9FB;
             margin-bottom: 0.8rem;
             border-radius: 18px;
+
+            @include media-breakpoint-up(md){
+                width: 100%;
+             }
             .row{
               
 

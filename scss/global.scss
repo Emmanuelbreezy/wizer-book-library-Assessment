@@ -7,8 +7,9 @@
 @use './layout/layout';
 
 //IMPORT THE COMPONENT
-@use './components/sidebar';
 @use './components/navbar';
+@use './components/menu';
+@use './components/sidebar';
 @use './components/modal';
 // @use 'components/animation';
 
