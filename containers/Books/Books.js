@@ -14,25 +14,25 @@ export default function Books({simiplified}) {
     
     const [currentBook,setCurrentBook] = useState({});
     
-  useEffect(() => {
-    setLoading(true);
-    fetch('https://61167dbc1c592d0017bb7f4c.mockapi.io/books',{
-        method:"GET",
-        headers:{
-            'Content-Type': 'application/json'
-        }
-    })
-    .then(response => {
-         return response.json();
-    }).then(data => {
-        setAllBooks(data);
-        setLoading(false);
-    })
-    .catch(error => {
-        setLoading(false);
-        console.log(error)
-    })
-   }, [])
+    useEffect(() => {
+        setLoading(true);
+        fetch('https://61167dbc1c592d0017bb7f4c.mockapi.io/books',{
+            method:"GET",
+            headers:{
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => {
+            return response.json();
+        }).then(data => {
+            setAllBooks(data);
+            setLoading(false);
+        })
+        .catch(error => {
+            setLoading(false);
+            console.log(error)
+        })
+    }, [])
 
    const handleBookDelete = (bookId) => {
         setOpenPane(false);

@@ -26,6 +26,36 @@ export default function AddBook() {
       },
     });
 
+    const handleAddSubmit = (data) =>{
+        console.log(data,'data')
+        setLoading(true);
+        fetch('https://61167dbc1c592d0017bb7f4c.mockapi.io/books',{
+          method:"POST",
+          headers:{
+              'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({  
+              name: data.bookName,  
+              isFavorite: data.isFavorite 
+          })
+      })
+      .then(response => {
+          setLoading(false);
+          console.log(response)
+
+          if(response.status=== 201 || response.status=== 200){
+              return router.push('/books')
+          } 
+          
+      })
+      .catch(error => {
+          setLoading(false);
+          setError('Error Ocurred,Try again');
+          console.log(error)
+      })
+
+    }
+
       return (
         <div className="app-add--category mt-2">
        
