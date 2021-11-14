@@ -1,0 +1,19 @@
+@use './vendor/boostrap';
+
+//THEMES
+@use './theme/appTheme.scss';
+
+//LAYOUT
+@use './layout/layout';
+
+//IMPORT THE COMPONENT
+@use './components/sidebar';
+@use './components/navbar';
+@use './components/modal';
+// @use 'components/animation';
+
+//IMPORT THE SECTIONS
+@use './sections/homepage';
+@use './sections/books';
+@use './sections/add-category';
+@use './sections/categories';

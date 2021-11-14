@@ -1,0 +1,25 @@
+@use '../vendor/boostrap' as *;
+@use '../theme/appTheme'  as *; 
+
+
+
+.custom-modal{
+  width: 400px;
+  
+  .custom-modal-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    color: white;
+    padding: 0.7rem;
+    background-color: var(--secondary-color);
+  }
+  .custom-modal-body{
+    padding: 2.5rem;
+  }
+
+}

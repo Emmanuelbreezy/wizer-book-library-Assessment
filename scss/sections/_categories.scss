@@ -1,0 +1,67 @@
+@use '../vendor/boostrap' as *;
+@use '../theme/appTheme'  as *; 
+
+
+.all--category{
+    padding-top: 0.3rem;
+
+    .display-4{
+        font-size: 2.0rem;
+        font-weight: 500;
+        padding-left: 0.2rem;
+        margin-top: 0.4rem;
+        margin-bottom: 1.2rem;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .row{
+        .card{
+            cursor: pointer;
+            border-radius: 15px;
+            text-decoration: none;
+
+            .imgPlaceholder--img{
+                width: 100%;
+                background-color: rgb(250, 250, 250);
+               height: 100px;
+            }
+            
+
+            .card-body{
+                width: 100%;
+                margin: 0 auto;
+
+                .card--description{
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    .display-4{
+                        font-size: 1.3rem;
+                        font-weight: 400;
+                        color: var(--secondary-color);
+                        text-overflow: ellipsis;
+                        text-transform: capitalize;
+                        margin: 0;
+                    }
+
+                }
+            }
+
+            &:hover{
+                background-color:#f4f4fa;
+                color: white;
+                //border:1px solid rgb(180, 177, 177);
+            }
+        }
+    }
+
+}
+
+.action--trigger{
+    button{
+        margin-bottom: 0.5rem;
+        font-size: 1.2rem;
+        
+    }
+}

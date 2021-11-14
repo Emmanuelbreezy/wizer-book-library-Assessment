@@ -1,0 +1,18 @@
+@use '../vendor/boostrap' as *;
+@use '../theme/appTheme'  as *; 
+
+
+.header--nav{
+    position: relative;
+    height: 90px;
+    margin-bottom: 0.8rem;
+    .navbar{
+        height: 100%;
+        padding-bottom: 0.7rem;
+        width: 100%;
+        border-bottom: 1px solid rgba($color: #eee, $alpha: 0.3);
+
+        
+    }
+    
+}

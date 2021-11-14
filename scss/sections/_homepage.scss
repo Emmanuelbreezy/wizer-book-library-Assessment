@@ -1,0 +1,121 @@
+@use '../vendor/boostrap' as *;
+@use '../theme/appTheme'  as *; 
+
+
+
+.home--section{
+    width: 100%;
+    height: 100%;
+
+
+    .container-fluid{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-right: 2.8rem;
+
+
+        .home--top--wrapper{
+            width: 100%;
+            height: 300px;
+            background-color: #F9F9FB;
+            margin-bottom: 0.8rem;
+            border-radius: 18px;
+
+            .row{
+
+                h3{
+                    padding: 1.0rem 2.1rem 1.5rem 2.1rem ;
+                    font-size: 2.7rem;
+                    letter-spacing: 1px;
+                    display: inline-block;
+                    font-weight: 800;
+                    font-family: 'Poppins', sans-serif;
+                   //font-family: 'Architects Daughter', cursive;
+                    margin: 0;
+                    color: var(--secondary-color);
+                }
+
+                p{
+                    font-size: 1.2rem;
+                    padding-left: 2.7rem;
+                    font-family: 'Architects Daughter', cursive;
+                }
+
+          }
+            
+        }
+
+        .jumbotron{
+            width: 100%;
+            padding:4rem;
+            text-align: center;
+            margin-top: 0.8rem; 
+
+            .noitem--img{
+                width: 150px;
+                height: auto;
+                margin: 0 auto;
+            }
+
+            a{
+                margin: 0 auto;
+                width: 200px;
+                display: inline-flex;
+                text-decoration: none;
+                padding:0.7rem;
+                padding-left: 1.5rem;
+                text-align: center;
+                color: var(--secondary-color);
+                background-color: rgba($color: #F6EABB, $alpha: 0.3);
+                cursor: pointer;
+                border-radius: 15px;
+
+                span{
+                    margin-left: 0.7rem;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .home--list--books{
+            padding-top: 0.3rem;
+
+            .top--head--bar{
+                
+                .display-4{
+                    font-size: 1.7rem;
+                    font-weight: 500;
+                    padding-left: 0.2rem;
+                    font-family: 'Poppins', sans-serif;
+                }
+
+                button{
+
+                    background-color:rgba($color: #f4f4fa, $alpha: 0.3);
+                    border: none;
+                    box-shadow: none;
+                    padding-left: 1.0rem;
+                    padding-right: 1.0rem;
+                    padding-top: 0.5rem;
+                    padding-bottom: 0.5rem;
+                    border-radius: 10px;
+
+                    i{
+                        margin-left: 0.5rem;
+                        font-size: 1.5rem;
+                    }
+
+                    &:hover{
+                        background-color: #F9F9FB;
+                        opacity: 0.8;
+                        color: #ddd;
+                    }
+                }
+
+            }
+                
+           
+        }
+    }
+}
