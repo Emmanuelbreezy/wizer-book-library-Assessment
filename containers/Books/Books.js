@@ -35,8 +35,7 @@ export default function Books({simiplified}) {
    }, [])
 
    const handleBookDelete = (bookId) => {
-        console.log(bookId,'catId');
-        setIsOpen(false);
+        setOpenPane(false);
         setLoading(true);
         fetch(`https://61167dbc1c592d0017bb7f4c.mockapi.io/${bookId.toString()}`,{
             method:"DELETE",
