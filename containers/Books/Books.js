@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import SlidingPane from 'react-sliding-pane';
 import bookplaceholder from  '../../public/assets/images/book_placeholder1.png';
 import noItemImg from  '../../public/assets/images/not_exist.png';
@@ -33,18 +34,43 @@ export default function Books({simiplified}) {
     })
    }, [])
 
-   const triggerSlidingPane = (bookId,bookName,createdDate) => {
+   const handleBookDelete = (bookId) => {
+        console.log(bookId,'catId');
+        setIsOpen(false);
+        setLoading(true);
+        fetch(`https://61167dbc1c592d0017bb7f4c.mockapi.io/${bookId.toString()}`,{
+            method:"DELETE",
+            headers:{
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(response => {
+            return response.json();
+        }).then(data => {
+            // setAllCategories(data);
+            setLoading(false);
+        })
+        .catch(error => {
+            setLoading(false);
+            console.log(error)
+        })
+}
+
+   const triggerSlidingPane = (bookId,bookName,bookDate) => {
     setCurrentBook({
         ...currentBook,
-        bookId,
-        bookName,
-        createdDate,
+        id:bookId,
+        name: bookName,
+        createdAt:bookDate,
     });
     setOpenPane(true);
 }
 
+
 const closeSlidingPane = () => setOpenPane(false);
     
+
+ console.log(currentBook,'crt');
     
 
    const limit = simiplified ? 4 : -1;
@@ -89,7 +115,7 @@ const closeSlidingPane = () => setOpenPane(false);
         ) }
            </div>
 
-        {openPane ? (<SlidingPane
+        {openPane && currentBook  ? (<SlidingPane
                     className="sliding--pane"
                     overlayClassName="overLay--sliding"
                     closeIcone={<i className="fa fas-times"></i>}
@@ -102,12 +128,31 @@ const closeSlidingPane = () => setOpenPane(false);
                             <div className="container">
                                 <div className="book-detail-top">
                                     <h5>About the book</h5>
-                                    <div className="book--cover-img">
-                                       
-                                       
-                                    </div>
+                                    <div className="book--card">
+                                        <div className="book--card--body">
+                                            <div className="book--card--img">
+                                                {/* <div className="imgPlaceholder"></div> */}
+                                                <Image src={bookplaceholder} width="" />
+                                            </div>
+                                            <div className="book--card--title">
+                                                <h5 className="display-4">{currentBook.name}</h5>
+                                                <span>{ 
+                                                        new Date(currentBook.createdAt).toLocaleDateString()
+                                                        
+                                                    }</span>
+                                            </div>
+
+                                            <div className="book--card--desc text-center">
+                                              <p className="text-white">No description</p>
+                                            </div>
+                                        </div>
+                                        <div className="book--card-action">
+                                            <Link href={`/books/add-book?_id=${currentBook.id}&edit=true`}><button className="btn btn-primary w-100">Edit</button></Link>
+                                            <button className="btn btn-danger w-100 mt-2" onClick={() => handleBookDelete(currentBook.id)}>Delete</button>
+                                        </div>
                                 </div>
                                 
+                             </div>
                             </div>
                         </div>
                      

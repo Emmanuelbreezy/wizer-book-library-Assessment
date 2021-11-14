@@ -11513,8 +11513,34 @@ body {
 .book--details h5 {
   color: white;
 }
-.book--details .book--cover-img {
-  margin-top: 0.3rem;
+.book--details .book--card {
+  width: 80%;
+  margin: 0.3rem auto;
+}
+.book--details .book--card--body {
+  padding-top: 2rem;
+}
+.book--details .book--card--body .book--card--img {
+  border-radius: 20px;
+  background-color: var(--secondary-lightcolor);
+  margin: 0 auto;
+}
+.book--details .book--card--body .book--card--title {
+  padding-top: 0.9rem;
+  padding-bottom: 1.3rem;
+}
+.book--details .book--card--body .book--card--title span {
+  color: wheat;
+}
+.book--details .book--card--body .book--card--title .display-4 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: whitesmoke;
+  text-overflow: ellipsis;
+  padding-left: 0.2rem;
+  padding-bottom: 0.5rem;
+  text-transform: capitalize;
+  margin: 0 auto;
 }
 
 .app-add--category .container {
