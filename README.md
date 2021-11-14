@@ -1,6 +1,6 @@
 ![payqart](https://user-images.githubusercontent.com/35114137/140321563-8c781f29-baf5-44cd-abfc-5c86a56fd860.jpg)
 
-# PayQart Frontend Assessment
+# Wizer Book Library Frontend Assessment
 ----
 
 The application is built with [React/Next.js Framework](https://nextjs.org/) and Sass(Boostrap)
@@ -10,9 +10,11 @@ The application is built with [React/Next.js Framework](https://nextjs.org/) and
 ## Libraries used
 
 1. boostrap (custom with sass)
-2. react-datepicker
-3. react-number-format
-4. react-stepper-horizontal
+2. react-modal
+3. formik
+4. yup
+5. @fortawesome/fontawesome-free
+6. react-sliding-pane
 
 ## Getting Started
 
