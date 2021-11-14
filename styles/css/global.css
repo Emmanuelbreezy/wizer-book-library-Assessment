@@ -11189,7 +11189,7 @@ body {
   z-index: 1;
   height: auto;
   padding: 0.2rem;
-  background-color: rgba(209, 207, 207, 0.1);
+  background-color: #f2f2f2;
   margin-top: 1.2rem;
 }
 .header--nav .navbar-collapse ul {
