@@ -14,7 +14,7 @@
         z-index: 9999;
         border-bottom: 1px solid rgba($color: #eee, $alpha: 0.3);
 
-        @include media-breakpoint-up(md){
+        @include media-breakpoint-up(lg){
             width: 77.5%;
          }
     }
@@ -27,6 +27,9 @@
         padding: 0.2rem;
         background-color: rgba(209, 207, 207, 0.1); 
         margin-top: 1.2rem;
+
+        @include media-breakpoint-up(lg){
+         }
 
         ul{
             list-style: none;

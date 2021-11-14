@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React,{useState} from 'react';
 import Link from 'next/link';
 import Menus from '../Menus/Menus';
 
@@ -18,11 +18,12 @@ export default function NavBar() {
                     </button>
                    
           </div>
-        <div className={toggleDrop ? "show d-lg-none shadow navbar-collapse" : "collapse d-lg-none navbar-collapse"} id="navbarSupportedContent">
-          <div className="container">
-              <Menus />
-          </div>
-        </div>
+            {toggleDrop ? (<div className="colld-lg-none d-md-block d-sm-block shadow navbar-collapse" id="navbarSupportedContent">
+            <div className="container">
+                <Menus />
+            </div>
+            </div>
+            ):  null}
         </nav>
         </div>
     )

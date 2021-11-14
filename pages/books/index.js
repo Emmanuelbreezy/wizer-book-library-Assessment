@@ -19,7 +19,7 @@ export default function ListBooks() {
         </Head>
         <Layout>
           <div className="top--book">
-             <h3 className="display-4">All Books</h3>
+             <h3 className="display-4 ms-1">All Books</h3>
             <Books simiplified={false} />
           </div>
         </Layout>

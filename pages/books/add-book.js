@@ -15,7 +15,7 @@ export default function Book() {
         </Head>
         <Layout>
           <div className="top--book">
-             <h3 className="display-4">Add Book</h3>
+             <h3 className="display-4 ms-1">Add Book</h3>
           </div>
         </Layout>
         
