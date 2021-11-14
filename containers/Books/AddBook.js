@@ -1,71 +1,89 @@
-import React from 'react';
+import React,{useState} from 'react';
+import Image from 'next/image';
+import {useRouter} from 'next/router';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import bookplaceholder from  '../../public/assets/images/book_placeholder1.png';
 
 export default function AddBook() {
+  const router = useRouter()
+  const query = router.query;
+  
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
     const formik = useFormik({
-        initialValues: {
-          firstName: '',
-          lastName: '',
-          email: '',
-        },
-        validationSchema: Yup.object({
-          firstName: Yup.string()
-            .max(15, 'Must be 15 characters or less')
-            .required('Required'),
-          lastName: Yup.string()
-            .max(20, 'Must be 20 characters or less')
-            .required('Required'),
-          email: Yup.string().email('Invalid email address').required('Required'),
-        }),
-        onSubmit: values => {
-          alert(JSON.stringify(values, null, 2));
-        },
-      });
-      return (
-        <form onSubmit={formik.handleSubmit}>
-          <label htmlFor="firstName">First Name</label>
-          <input
-            id="firstName"
-            name="firstName"
-            type="text"
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={formik.values.firstName}
-          />
-          {formik.touched.firstName && formik.errors.firstName ? (
-            <div>{formik.errors.firstName}</div>
-          ) : null}
-    
-          <label htmlFor="lastName">Last Name</label>
-          <input
-            id="lastName"
-            name="lastName"
-            type="text"
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={formik.values.lastName}
-          />
-          {formik.touched.lastName && formik.errors.lastName ? (
-            <div>{formik.errors.lastName}</div>
-          ) : null}
-    
-          <label htmlFor="email">Email Address</label>
-          <input
-            id="email"
-            name="email"
-            type="email"
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-            value={formik.values.email}
-          />
-          {formik.touched.email && formik.errors.email ? (
-            <div>{formik.errors.email}</div>
-          ) : null}
-    
-          <button type="submit">Submit</button>
-        </form>
+      initialValues: {
+        bookName: '',
+        isFavorite: false
+      },
+      validationSchema: Yup.object({
+          categoryName: Yup.string()
+          .required('Must add a Book name'),
+      }),
+      onSubmit: values => {
+          handleAddSubmit(values);
+      },
+    });
 
+      return (
+        <div className="app-add--category mt-2">
+       
+
+          <div className="container ">
+           <br />
+            <form className="form needs-validation" method="POST" onSubmit={formik.handleSubmit}>
+              <fieldset disabled={loading ? true : false}>
+                  <div className="row align-items-center">
+                      <div className="col-12 col-md-4">
+                        <div className="cat--cover">
+                          <Image src={bookplaceholder} width="" />
+                        </div>
+                      </div>
+                      <div className="col-12  col-md-6 pe-0 pt-0">
+
+                        <div className="mb-3">
+                        {formik.touched.bookName && formik.errors.bookName ? (
+                              <><div className="alert alert-danger pt-2 pb-2" role="alert">{formik.errors.bookName}</div></>
+                          ) : null}
+
+                          <label className="form-label" htmlFor="bookName">Book Name</label>
+                          <input
+                              className="form-control"
+                              id="bookName"
+                              name="bookName"
+                              type="text"
+                              onChange={formik.handleChange}
+                              onBlur={formik.handleBlur}
+                              value={formik.values.bookName}
+                              aria-describedby="eHelp"
+                          />
+                        
+                      </div>
+                      <div class="form-check">
+                          <input className="form-check-input" 
+                              type="checkbox" 
+                              id="isFavorite" 
+                              onChange={formik.handleChange}
+                              onBlur={formik.handleBlur}
+                              value={formik.values.isFavorite}
+                              style={{cursor:'pointer'}}
+                          />
+                          <label className="form-check-label" htmlFor="isFavorite" style={{cursor:'pointer'}}>
+                              Favorite
+                          </label>
+                      </div>
+                          <button className="btn btn-secondary w-100 mt-1" type="submit">
+                              Create
+                          </button>
+                      </div>
+                  </div>
+              
+              </fieldset>
+
+              </form>
+
+          </div>
+  </div>
       )
 }

@@ -60,7 +60,7 @@ export default function AddCategory() {
         console.log(data,'data')
         setLoading(true);
         fetch('https://61167dbc1c592d0017bb7f4c.mockapi.io/categories',{
-            method:"POST",
+            method:"PUT",
             headers:{
                 'Content-Type': 'application/json'
             },
@@ -93,11 +93,11 @@ export default function AddCategory() {
               <form className="form needs-validation" method="POST" onSubmit={formik.handleSubmit}>
                 <fieldset disabled={loading ? true : false}>
                     <div className="row align-items-center">
-                        <div className="col-12 col-lg-4">
+                        <div className="col-12 col-md-4">
                            <div className="cat--cover">
                            </div>
                         </div>
-                        <div className="col-12 col-lg-6 pe-0 pt-0">
+                        <div className="col-12  col-md-6 pe-0 pt-0">
 
                            <div className="mb-3">
                            {formik.touched.categoryName && formik.errors.categoryName ? (

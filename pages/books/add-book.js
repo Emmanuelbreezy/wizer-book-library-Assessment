@@ -1,6 +1,7 @@
 import React from 'react';
 import Head from 'next/head';
 import Layout from '../../hoc/Layout/Layout';
+import AddBook from '../../containers/Books/AddBook';
 
 export default function Book() {
     return (
@@ -16,6 +17,7 @@ export default function Book() {
         <Layout>
           <div className="top--book">
              <h3 className="display-4 ms-1">Add Book</h3>
+             <AddBook />
           </div>
         </Layout>
         
