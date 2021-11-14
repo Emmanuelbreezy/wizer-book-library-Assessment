@@ -103,7 +103,8 @@ const closeSlidingPane = () => setOpenPane(false);
                                 <div className="book-detail-top">
                                     <h5>About the book</h5>
                                     <div className="book--cover-img">
-
+                                       
+                                       
                                     </div>
                                 </div>
                                 
