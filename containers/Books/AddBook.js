@@ -60,7 +60,7 @@ export default function AddBook() {
         <div className="app-add--category mt-2">
        
 
-          <div className="container ">
+          <div className="container px-sm-3">
            <br />
             <form className="form needs-validation" method="POST" onSubmit={formik.handleSubmit}>
               <fieldset disabled={loading ? true : false}>
