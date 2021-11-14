@@ -78,7 +78,7 @@
     width: 70%!important;
     background-color: var(--secondary-color) !important;
 
-    @include media-breakpoint-up(lg){
+    @include media-breakpoint-up(md){
         width: 300px!important;
     }
 }

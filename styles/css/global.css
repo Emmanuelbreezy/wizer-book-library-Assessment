@@ -11497,7 +11497,7 @@ body {
   width: 70% !important;
   background-color: var(--secondary-color) !important;
 }
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .sliding--pane {
     width: 300px !important;
   }
