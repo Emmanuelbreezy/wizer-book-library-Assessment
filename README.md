@@ -1,11 +1,10 @@
-![payqart](https://user-images.githubusercontent.com/35114137/140321563-8c781f29-baf5-44cd-abfc-5c86a56fd860.jpg)
 
 # Wizer Book Library Frontend Assessment
 ----
 
 The application is built with [React/Next.js Framework](https://nextjs.org/) and Sass(Boostrap)
 
-[PayQart Assessment Demo](https://paddle-frontend-assessment.vercel.app/homepage)
+[Book Library Assessment Demo](https://paddle-frontend-assessment.vercel.app/homepage)
 
 ## Libraries used
 
@@ -21,7 +20,7 @@ The application is built with [React/Next.js Framework](https://nextjs.org/) and
 First, clone the repository:
 
 ```bash
-  git clone https://github.com/Emmanuelbreezy/payqart-frontend-assessment.git
+  git clone https://github.com/Emmanuelbreezy/wizer-book-library-Assessment.git
 ```
 run the development server:
 
