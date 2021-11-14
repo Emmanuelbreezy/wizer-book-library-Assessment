@@ -81,7 +81,7 @@ export default function Categories({simiplified}) {
                         </div>)
                 }
                 return(
-                <div className="col-12 col-lg-3" key={category.id}>
+                <div className="col-12 col-md-4  col-lg-3" key={category.id}>
                     <a className="card" onClick={() => triggerModal(category.id,index)}>
                         <div className="card-body">
                             <div className="card--description">

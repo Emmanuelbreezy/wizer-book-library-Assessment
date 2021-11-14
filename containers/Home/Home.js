@@ -14,14 +14,14 @@ export default function Home() {
                     
                     <div className="home--top--wrapper "style={{display:"block"}}>
                          <div className="row">
-                             <div className="col-12 col-lg-6 pr-0 p-5 ">
+                             <div className="col-12 col-md-6 pr-0 p-5 ">
                                  <h3 className="display-3">
                                      <span className="d-block">Your library</span>
                                      <span className="d-block">anywhere</span>
                                  </h3>
                                  <p>Learn with fun..........</p>
                              </div>
-                             <div className="col-12 col-lg-6 pl-0">
+                             <div className="col-12 col-md-6 pl-0">
                                  <div className="home--top-img">
                                      <Image src={bookreadingImg} width="" />
                                  </div>

@@ -20,7 +20,6 @@
     .app--mainbar{
         height: auto;
         background-color: #fff;
-        //padding: 0rem 0 0.5rem 2rem;
 
         @include media-breakpoint-up(lg){
             flex-direction: column;
@@ -28,7 +27,8 @@
             overflow-x: hidden;
             overflow-y: auto;
             background-color: #fff;
-            padding: 0rem 0 0.5rem 0rem;
+
+
          }
 
         

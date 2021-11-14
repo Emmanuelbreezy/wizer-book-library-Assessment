@@ -4,7 +4,11 @@
 
 
 .custom-modal{
-  width: 400px;
+  width: 300px;
+
+  @include media-breakpoint-up(lg){
+    width: 400px;
+ }
   
   .custom-modal-header{
     display: flex;

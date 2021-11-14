@@ -49,7 +49,7 @@ export default function Books({simiplified}) {
                             </div>)
                 }
                 return(
-                <div className="col-12 col-lg-3" key={book.id}>
+                <div className="col-6 col-md-4 col-lg-3" key={book.id}>
                     <a className="card">
                         <div className="card-body">
                             <div className="card--img">

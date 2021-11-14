@@ -7,16 +7,13 @@ export default function NavBar() {
     return (
         <div className="header--nav  mb-4 ">
             <nav className="navbar navbar-expand-lg sticky-top navbar-light">
-                <Link href="/"><a className="navbar-brand ms-2" >BookLib</a></Link>
                 <div className="container-fluid">
-                    <a className="navbar-brand" href="#"></a>
+                   <Link href="/"><a className="navbar-brand ms-2" >BookLib</a></Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                     </button>
-                    <div className="collapse navbar-collapse d-flex justify-content-end" id="navbarSupportedContent">
-                    {/* <form className=" col-4">
-                        <input className="form-control me-2 " type="search" placeholder="Search" aria-label="Search" />
-                    </form> */}
+                    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                   
                     </div>
           </div>
         </nav>

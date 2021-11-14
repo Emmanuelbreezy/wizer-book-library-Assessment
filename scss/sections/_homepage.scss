@@ -12,34 +12,51 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding-right: 2.8rem;
+        padding-right: 0rem;
+
+        @include media-breakpoint-up(lg){
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding-right: 2.8rem;
+         }
 
 
         .home--top--wrapper{
-            width: 100%;
-            height: 300px;
+           width: 100%;
             background-color: #F9F9FB;
             margin-bottom: 0.8rem;
             border-radius: 18px;
-
             .row{
+              
 
                 h3{
-                    padding: 1.0rem 2.1rem 1.5rem 2.1rem ;
-                    font-size: 2.7rem;
+                   
                     letter-spacing: 1px;
                     display: inline-block;
                     font-weight: 800;
                     font-family: 'Poppins', sans-serif;
-                   //font-family: 'Architects Daughter', cursive;
                     margin: 0;
+                    font-size: 2.0rem;
+                    padding: 1.0rem 0.1rem 1.5rem 0.1rem ;
                     color: var(--secondary-color);
+
+                    @include media-breakpoint-up(md){
+                        padding: 1.0rem 2.1rem 1.5rem 2.1rem ;
+                        font-size: 2.7rem;
+                     }
                 }
 
                 p{
                     font-size: 1.2rem;
                     padding-left: 2.7rem;
                     font-family: 'Architects Daughter', cursive;
+                }
+
+                .home--top-img{
+                    img{
+
+                    }
                 }
 
           }

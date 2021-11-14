@@ -9,7 +9,7 @@ export default function Layout(props) {
 
             <main className="w-100 app--mainbar">
               <NavBar />
-              <div className="col-12 ps-3">
+              <div className="col-12 ps-lg-3">
                 {props.children}
               </div>
             </main>
