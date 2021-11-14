@@ -11175,7 +11175,7 @@ body {
   padding-top: 0.7rem;
   width: 100%;
   background-color: #fff;
-  z-index: 9999;
+  z-index: 1 !important;
   border-bottom: 1px solid rgba(238, 238, 238, 0.3);
 }
 @media (min-width: 992px) {
@@ -11191,6 +11191,7 @@ body {
   padding: 0.2rem;
   background-color: #f2f2f2;
   margin-top: 1.2rem;
+  transition: height 3s;
 }
 .header--nav .navbar-collapse ul {
   list-style: none;
@@ -11522,6 +11523,30 @@ body {
 .top--book .row .card:hover {
   background-color: #f4f4fa;
   color: white;
+}
+
+.sliding--pane {
+  width: 70% !important;
+  background-color: var(--secondary-color) !important;
+}
+@media (min-width: 992px) {
+  .sliding--pane {
+    width: 300px !important;
+  }
+}
+
+.overLay--sliding {
+  z-index: 10001 !important;
+}
+
+.book--details {
+  text-align: center;
+}
+.book--details h5 {
+  color: white;
+}
+.book--details .book--cover-img {
+  margin-top: 0.3rem;
 }
 
 .app-add--category .container {

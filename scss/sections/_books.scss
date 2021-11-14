@@ -73,3 +73,28 @@
         }
     }
 }
+
+.sliding--pane{
+    width: 70%!important;
+    background-color: var(--secondary-color) !important;
+
+    @include media-breakpoint-up(lg){
+        width: 300px!important;
+    }
+}
+
+.overLay--sliding{
+    z-index: 10001 !important;
+}
+
+.book--details{
+    text-align: center;
+
+    h5{
+        color: white;
+    }
+
+    .book--cover-img{
+        margin-top: 0.3rem;
+    }
+}

@@ -11,7 +11,7 @@
         padding-top: 0.7rem;
         width: 100%;
         background-color: #fff;
-        z-index: 9999;
+        z-index: 1 !important;
         border-bottom: 1px solid rgba($color: #eee, $alpha: 0.3);
 
         @include media-breakpoint-up(lg){
@@ -27,6 +27,7 @@
         padding: 0.2rem;
         background-color: #f2f2f2;
         margin-top: 1.2rem;
+        transition: height 3s ;
 
         @include media-breakpoint-up(lg){
          }
